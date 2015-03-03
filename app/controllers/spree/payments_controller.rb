@@ -1,6 +1,7 @@
 module Spree
   class PaymentsController < Spree::StoreController
-    before_filter :authenticate_spree_user!
+    #changed before filter from authenticate_spree_user to accomondate custom user class
+    before_filter :authenticate_user!
     before_filter :find_payment
 
     def update
